@@ -22,6 +22,21 @@ public class Main {
         progres.add("D://Games//savegames//progress1.dat");
         progres.add("D://Games//savegames//progress2.dat");
 
+        zipGame("D://Games//savegames//saving.zip", progres);
+
+        try (BufferedReader br = new BufferedReader(new FileReader("D://Games//savegames"))) {
+            String s;
+            String template = "saving.zip";
+            while ((s = br.readLine()) != null) {
+                boolean compare = s.equals("saving.zip");
+                if (compare == false) {
+                    File extra = new File(s);
+                    extra.delete();
+                }
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 
     @Override
