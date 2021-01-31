@@ -39,16 +39,6 @@ public class Main {
         }
     }
 
-    @Override
-    public String toString() {
-        return "GameProgress{" +
-                "health=" + health +
-                ", weapons=" + weapons +
-                ", lvl=" + lvl +
-                ", distance=" + distance +
-                '}';
-    }
-
     public void saveGame(String path, GameProgress gameProgress) {
         try (FileOutputStream fos = new FileOutputStream(path);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
