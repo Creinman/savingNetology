@@ -15,5 +15,15 @@ public class GameProgress implements Serializable {
             this.lvl = lvl;
             this.distance = distance;
         }
+        
+      @Override
+      public String toString() {
+        return "GameProgress{" +
+                "health=" + health +
+                ", weapons=" + weapons +
+                ", lvl=" + lvl +
+                ", distance=" + distance +
+                '}';
+    }
 }
 
